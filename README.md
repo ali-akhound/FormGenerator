@@ -1,6 +1,6 @@
 # Blazor Dynamic Form Generator
 
-This project is a Blazor WebAssembly application designed to dynamically generate forms based on JSON configuration files. It leverages MudBlazor for enhanced UI and user experience.
+This project is a Blazor WebAssembly application designed to generate forms based on JSON configuration files dynamically. It leverages MudBlazor to enhance UI and user experience.
 
 ## Project Overview
 
@@ -30,11 +30,7 @@ This application reads form field configurations from JSON files located in `www
               "required": false,
               "min": null,
               "max": null,
-              "values": null,
-              "placeholder": null,
-              "value": null,
-              "readOnly": false,
-              "htmlAttributes": null
+              "values": [],
             },
             // ... more fields
           ]
@@ -43,15 +39,12 @@ This application reads form field configurations from JSON files located in `www
     * The `type` field corresponds to the `InputType` enum (text, email, number, dropdown, checkbox, date, time, radio).
 * **Data Types:**
     * Number fields expect integer values.
-    * Date and Time fields expect standard date and time formats.
 * **MudBlazor:**
     * The project relies on the MudBlazor library for UI components. Ensure MudBlazor is properly installed and configured.
 * **Component Inheritance:**
     * All custom form field components inherit from a base component. This base component is assumed to provide common functionalities.
 * **Error Handling:**
     * Basic error handling is implemented for JSON deserialization. More robust error handling may be required for production environments.
-* **Value Storage:**
-    * The FormField class contains a Value property of type object. This property is used to store the value of the field. It is the responsiblity of the implementation to cast this object to the correct type.
 
 ## Getting Started
 
@@ -62,7 +55,7 @@ This application reads form field configurations from JSON files located in `www
     ```
 
 2.  **Install Dependencies:**
-    * Ensure you have the .NET SDK installed.
+    * Ensure you have the .NET 8 SDK installed.
     * Restore NuGet packages:
         ```bash
         dotnet restore
