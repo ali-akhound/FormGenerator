@@ -37,7 +37,7 @@ This application reads form field configurations from JSON files located in `www
           ]
         }
         ```
-    * The `type` field corresponds to the `InputType` enum (text, email, number, dropdown, checkbox, date, time, radio).
+    * The `type` field can be (text, email, number, dropdown, checkbox, date, time, radio).
 * **Data Types:**
     * Number fields expect integer values.
 * **MudBlazor:**
