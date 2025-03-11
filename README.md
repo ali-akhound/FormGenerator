@@ -99,15 +99,15 @@ This application reads form field configurations from JSON files located in `www
       "required": true
     },
     {
-      "type": "radio",
-      "label": "Industry Radio",
-      "values": [ "Tech", "Production", "Health" ],
-      "required": true
-    },
-    {
       "type": "checkbox",
       "label": "Subscribe to Newsletter",
       "required": false
+    },
+    {
+      "type": "radio",
+      "label": "Visa Status",
+      "values": [ "PR", "Citizen", "Work Permit" ],
+      "required": true
     }
   ]
 }
