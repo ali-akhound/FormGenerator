@@ -13,6 +13,7 @@ This application reads form field configurations from JSON files located in `www
 * **MudBlazor Integration:** Utilizes MudBlazor for a modern and responsive user interface.
 * **Base Component Wrapper:** All field components inherit from a base component, providing a consistent interface and reducing code duplication.
 * **Customizable Field Options:** Date, time, and radio components support options read directly from the JSON configuration.
+* **JSON Output Display:** After submitting the form, the final JSON output representing the collected form data will be displayed below the form.
 
 ## Assumptions
 
