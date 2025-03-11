@@ -1,0 +1,40 @@
+﻿@using FormGenerator.Component.InputComponents
+@inherits BaseInputComponent<object>
+
+@switch (Field.Type)
+{
+    case "text":
+        <TextFieldComponent Label="@Field.Label" Required="@Field.Required"
+                            ValueChanged="OnValueChanged" />
+        break;
+    case "email":
+        <EmailFieldComponent Label="@Field.Label" Required="@Field.Required"
+                             ValueChanged="OnValueChanged" />
+        break;
+    case "number":
+        <NumberFieldComponent Label="@Field.Label" Required="@Field.Required"
+                              Min="Field.Min.Value" Max="Field.Max.Value"
+                              ValueChanged="@((e)=>OnValueChanged(e))" />
+        break;
+    case "dropdown":
+        <DropdownFieldComponent Label="@Field.Label" Required="@Field.Required"
+                                Options="@Field.Values" ValueChanged="OnValueChanged" />
+        break;
+    case "checkbox":
+        <CheckboxFieldComponent Label="@Field.Label" Required="@Field.Required" Value="false"
+                                ValueChanged="@((e)=>OnValueChanged(e))" />
+        break;
+    case "radio":
+        <RadioGroupComponent Label="@Field.Label" Required="@Field.Required"
+                             Options="@Field.Values"
+                             ValueChanged="@((e)=>OnValueChanged(e))" />
+        break;
+    case "date":
+        <DatePickerComponent Label="@Field.Label" Required="@Field.Required"
+                             ValueChanged="@((e)=>OnValueChanged(e))" />
+        break;
+    case "time":
+        <TimePickerComponent Label="@Field.Label" Required="@Field.Required"
+                             ValueChanged="@((e)=>OnValueChanged(e))" />
+        break;
+}

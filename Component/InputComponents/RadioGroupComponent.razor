@@ -1,0 +1,9 @@
+﻿@inherits BaseInputComponent<string>
+<BaseInputComponent T="string">
+    <MudRadioGroup T="string" Name="@Label" ValueChanged="ValueChanged" Required="@Required" RequiredError="@RequiredError">
+        @foreach (var item in Options)
+        {
+            <MudRadio T="string" Value="@item">@item</MudRadio>
+        }
+    </MudRadioGroup>
+</BaseInputComponent>

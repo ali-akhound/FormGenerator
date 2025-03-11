@@ -1,0 +1,17 @@
+﻿@page "/"
+
+@if (formConfiguration.Fields.Count > 0)
+{
+    <ErrorBoundary>
+        <ChildContent>
+            <PageTitle>@formConfiguration.Title</PageTitle>
+            <h3>@formConfiguration.Title</h3>
+            <div class="col-md-6 col-sm-12 col-lg-6">
+                <FormGeneratorComponent FormConfig="formConfiguration" />
+            </div>
+        </ChildContent>
+        <ErrorContent>
+            <p>Something went wrong</p>
+        </ErrorContent>
+    </ErrorBoundary>
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Sample Form",
+  "fields": [
+    {
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "type": "email",
+      "label": "Email",
+      "required": true
+    },
+    {
+      "type": "date",
+      "label": "BirthDate",
+      "required": true
+    },
+    {
+      "type": "time",
+      "label": "BirthTime",
+      "required": true
+    },
+    {
+      "type": "number",
+      "label": "Age",
+      "min": 18,
+      "max": 100
+    },
+    {
+      "type": "dropdown",
+      "label": "Industry",
+      "values": [ "Tech", "Production", "Health" ],
+      "required": true
+    },
+    {
+      "type": "radio",
+      "label": "Industry Radio",
+      "values": [ "Tech", "Production", "Health" ],
+      "required": true
+    },
+    {
+      "type": "checkbox",
+      "label": "Subscribe to Newsletter",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+﻿@inherits BaseInputComponent<string>
+<BaseInputComponent T="string">
+    <MudTextField T="string" Label="@Label" ValueChanged="ValueChanged" Required="@Required" ErrorText="@("Invalid email format.")" Clearable="@Clearable" RequiredError="@RequiredError"
+                  InputMode="InputMode.email"
+                  Validation="@(new Func<string, string>(ValidateEmail))" />
+</BaseInputComponent>

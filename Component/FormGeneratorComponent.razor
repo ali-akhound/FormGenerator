@@ -1,0 +1,13 @@
+﻿@if (FormConfig.Fields.Count > 0)
+{
+    <MudForm Model="@FormModel" @ref="MudFormRef">
+        @foreach (var field in FormConfig.Fields)
+        {
+            <DynamicFieldComponent Field="field" FieldValue="FormModel.GetValueOrDefault(field.Label)" ValueChanged="@((e)=>HandleValueChanged(field.Label,e))" />
+        }
+        <MudButton OnClick="SubmitForm" Variant="Variant.Filled" Color="Color.Primary">Submit</MudButton>
+    </MudForm>
+    <MudText Typo="Typo.body1">
+        @Output
+    </MudText>
+}

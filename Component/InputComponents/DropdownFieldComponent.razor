@@ -1,0 +1,9 @@
+﻿@inherits BaseInputComponent<string>
+<BaseInputComponent T="string">
+    <MudSelect T="string" Label="@Label" ValueChanged="ValueChanged" Required="@Required" Clearable="@Clearable" RequiredError="@RequiredError">
+        @foreach (var item in Options)
+        {
+            <MudSelectItem T="string" Value="@item">@item</MudSelectItem>
+        }
+    </MudSelect>
+</BaseInputComponent>
