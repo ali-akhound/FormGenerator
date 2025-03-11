@@ -13,12 +13,19 @@ namespace FormGenerator.Component.InputComponents
         /// Maximum value for the number input.
         /// </summary>
         [Parameter] public int Max { get; set; } = int.MaxValue;
+        string ErrorMessage = string.Empty;
         private string? RangeValidation(int? value)
         {
             if (value == null && Required)
-                return $"{Label} is required.";
+            {
+                ErrorMessage = $"{Label} is required.";
+                return ErrorMessage;
+            }
             if (value < Min || value > Max)
-                return $"{Label} must be between {Min} and {Max}.";
+            {
+                ErrorMessage = $"{Label} must be between {Min} and {Max}."; ;
+                return ErrorMessage;
+            }
             Value = value;
             return null; // No validation errors
         }

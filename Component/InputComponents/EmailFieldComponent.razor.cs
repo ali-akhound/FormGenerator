@@ -7,15 +7,22 @@ namespace FormGenerator.Component.InputComponents
     /// </summary>
     public partial class EmailFieldComponent : BaseInputComponent<string>
     {
+        string ErrorMessage = string.Empty;
         private string ValidateEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email) && Required)
-                return $"{Label} is required.";
+            {
+                ErrorMessage = $"{Label} is required.";
+                return ErrorMessage;
+            }
             if (!string.IsNullOrWhiteSpace(email))
             {
                 var emailRegex = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
                 if (!System.Text.RegularExpressions.Regex.IsMatch(email, emailRegex))
-                    return $"Invalid {Label} format.";
+                {
+                    ErrorMessage = $"Invalid {Label} format.";
+                    return ErrorMessage;
+                }
             }
             Value = email;
             return null; // Validation success
