@@ -51,8 +51,7 @@ This application reads form field configurations from JSON files located in `www
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [your-repository-url]
-    cd [your-project-directory]
+    git clone https://github.com/ali-akhound/FormGenerator.git
     ```
 
 2.  **Install Dependencies:**
@@ -61,14 +60,6 @@ This application reads form field configurations from JSON files located in `www
         ```bash
         dotnet restore
         ```
-
-3.  **Run the Application:**
-    ```bash
-    dotnet run --project [your-project-name].csproj
-    ```
-
-4.  **Access the Application:**
-    * Open your browser and navigate to the URL displayed in the console (e.g., `https://localhost:5001`).
 
 ## JSON Configuration Example
 
