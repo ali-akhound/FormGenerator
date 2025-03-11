@@ -100,8 +100,8 @@ This application reads form field configurations from JSON files located in `www
     },
     {
       "type": "radio",
-      "label": "Industry Radio",
-      "values": [ "Tech", "Production", "Health" ],
+      "label": "Visa Status",
+      "values": [ "PR", "Citizen", "Work Permit" ],
       "required": true
     },
     {
