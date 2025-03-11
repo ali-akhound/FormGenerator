@@ -3,21 +3,12 @@
   "fields": [
     {
       "type": "text",
-      "label": "Name"
+      "label": "Name",
+      "required": true
     },
     {
       "type": "email",
       "label": "Email",
-      "required": true
-    },
-    {
-      "type": "date",
-      "label": "BirthDate",
-      "required": true
-    },
-    {
-      "type": "time",
-      "label": "BirthTime",
       "required": true
     },
     {
@@ -29,13 +20,7 @@
     {
       "type": "dropdown",
       "label": "Industry",
-      "values": [ "Tech", "Production", "Health" ],
-      "required": true
-    },
-    {
-      "type": "radio",
-      "label": "Industry Radio",
-      "values": [ "Tech", "Production", "Health" ],
+      "values": [ "Technology", "Production", "Health" ],
       "required": true
     },
     {

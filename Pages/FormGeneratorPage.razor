@@ -1,6 +1,13 @@
 ﻿@page "/"
 
-@if (formConfiguration.Fields.Count > 0)
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        <p>An unexpected error occurred.</p>
+        <p>@errorMessage</p>
+    </div>
+}
+else if (formConfiguration.Fields.Count > 0)
 {
     <ErrorBoundary>
         <ChildContent>
@@ -11,7 +18,7 @@
             </div>
         </ChildContent>
         <ErrorContent>
-            <p>Something went wrong</p>
+            <p>An unexpected error occurred while rendering the form.</p>
         </ErrorContent>
     </ErrorBoundary>
 }
