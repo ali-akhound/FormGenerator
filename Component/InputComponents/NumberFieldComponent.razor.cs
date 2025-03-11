@@ -2,7 +2,7 @@
 
 namespace FormGenerator.Component.InputComponents
 {
-    public partial class NumberFieldComponent : BaseInputComponent<int>
+    public partial class NumberFieldComponent : BaseInputComponent<int?>
     {
         /// <summary>
         /// Minimum value for the number input.
@@ -13,8 +13,10 @@ namespace FormGenerator.Component.InputComponents
         /// Maximum value for the number input.
         /// </summary>
         [Parameter] public int Max { get; set; } = int.MaxValue;
-        private string? RangeValidation(int value)
+        private string? RangeValidation(int? value)
         {
+            if (value == null && Required)
+                return $"{Label} is required.";
             if (value < Min || value > Max)
                 return $"{Label} must be between {Min} and {Max}.";
             Value = value;

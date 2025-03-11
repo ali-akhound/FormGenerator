@@ -10,12 +10,12 @@ namespace FormGenerator.Component.InputComponents
         private string ValidateEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email) && Required)
-                return "Email is required.";
+                return $"{Label} is required.";
             if (!string.IsNullOrWhiteSpace(email))
             {
                 var emailRegex = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
                 if (!System.Text.RegularExpressions.Regex.IsMatch(email, emailRegex))
-                    return "Invalid email format.";
+                    return $"Invalid {Label} format.";
             }
             Value = email;
             return null; // Validation success

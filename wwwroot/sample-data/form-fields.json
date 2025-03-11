@@ -20,7 +20,7 @@
     {
       "type": "dropdown",
       "label": "Industry",
-      "values": [ "Technology", "Production", "Health" ],
+      "values": [ "Tech", "Production", "Health" ],
       "required": true
     },
     {

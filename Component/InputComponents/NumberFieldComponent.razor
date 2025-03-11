@@ -1,9 +1,9 @@
-﻿@inherits BaseInputComponent<int>
-<BaseInputComponent T="int">
-    <MudNumericField T="int" Label="@Label" ValueChanged="ValueChanged"
+﻿@inherits BaseInputComponent<int?>
+<BaseInputComponent T="int?">
+    <MudNumericField T="int?" Label="@Label" ValueChanged="ValueChanged"
                      Required="@Required" 
                      InputMode="InputMode.numeric" RequiredError="@RequiredError" 
                      ErrorText="@($"{Label} must be between {Min} and {Max}.")"
-                     Validation="@(new Func<int,string?>(RangeValidation))"
+                     Validation="@(new Func<int?,string?>(RangeValidation))"
                      />
 </BaseInputComponent>

@@ -50,7 +50,7 @@ namespace FormGenerator.Component
                     {
                         "text" => "",
                         "email" => "",
-                        "number" => 0,
+                        "number" => null,
                         "dropdown" => null,
                         "checkbox" => false,
                         "radio" => null,
